@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framework Structure</title>
+    <link class="logo" rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="framework-styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-container">
+                </div>
+                <div class="brand-text"><h2>RED HORN</h2></div>
+            </div>
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Loading Framework Structure...</p>
+        </div>
+    </div>
+    
+    <div id="particles-js"></div>
+    
+    <nav class="cyber-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-container">
+                </div>
+                <span class="brand-text"><a href="index.html" class="logo">RED HORN</a></span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-text="">HOME</a>
+                <a href="index.html#about" class="nav-link" data-text="">ABOUT</a>
+                <a href="index.html#features" class="nav-link" data-text="">FEATURES</a>
+                <a href="framework.html" class="nav-link active" data-text="">FRAMEWORK</a>
+                <a href="demo.html" class="nav-link" data-text="">DEMO</a>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="framework-hero">
+        <div class="framework-container">
+            <div class="framework-content">
+                <div class="framework-badge">
+                    <span class="badge-text">FRAMEWORK ARCHITECTURE</span>
+                    <div class="badge-glow"></div>
+                </div>
+                
+                <h1 class="framework-title">
+                    <span class="title-line">RED HORN</span>
+                    <span class="title-line accent">FRAMEWORK STRUCTURE</span>
+                </h1>
+                
+                <p class="framework-subtitle">
+                    Comprehensive vulnerability scanning framework with modular architecture, 
+                    featuring <span class="tech-highlight">12+ security modules</span> and 
+                    <span class="tech-highlight">advanced reconnaissance capabilities</span>.
+                </p>
+
+                <div class="framework-stats">
+                    <div class="stat">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">MODULES</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">DATA SOURCES</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">OPEN SOURCE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="framework-structure">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">01</span>
+                    FRAMEWORK OVERVIEW
+                </h2>
+                <p class="section-subtitle">Complete Project Structure & Architecture</p>
+            </div>
+
+            <div class="structure-tree">
+                <div class="tree-container">
+                    <div class="tree-node root">
+                        <div class="node-content">
+                            <i class="fas fa-folder-open"></i>
+                            <span class="node-name">Red Horn</span>
+                        </div>
+                        
+                        <!-- Root Level Files -->
+                        <div class="tree-branch">
+                            <!-- Configuration Files -->
+                            <div class="tree-node file">
+                                <div class="node-content">
+                                    <i class="fas fa-file-code"></i>
+                                    <span class="node-name">redhorn.py</span>
+                                </div>
+                            </div>
+                            <div class="tree-node file">
+                                <div class="node-content">
+                                    <i class="fas fa-cog"></i>
+                                    <span class="node-name">settings.py</span>
+                                </div>
+                            </div>
+                            <div class="tree-node file">
+                                <div class="node-content">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="node-name">requirements.txt</span>
+                                </div>
+                            </div>
+                            <div class="tree-node file">
+                                <div class="node-content">
+                                    <i class="fas fa-json"></i>
+                                    <span class="node-name">whois_servers.json</span>
+                                </div>
+                            </div>
+
+                            <!-- Documentation -->
+                            <div class="tree-node file">
+                                <div class="node-content">
+                                    <i class="fas fa-book"></i>
+                                    <span class="node-name">README.md</span>
+                                </div>
+                            </div>
+                            <div class="tree-node file">
+                                <div class="node-content">
+                                    <i class="fas fa-book"></i>
+                                    <span class="node-name">DEPLOYMENT_GUIDE.md</span>
+                                </div>
+                            </div>
+
+                            <!-- Deployment -->
+                            <div class="tree-node file">
+                                <div class="node-content">
+                                    <i class="fa-brands fa-docker"></i>
+                                    <span class="node-name">Dockerfile</span>
+                                </div>
+                            </div>
+                            <div class="tree-node file">
+                                <div class="node-content">
+                                    <i class="fa-brands fa-docker"></i>
+                                    <span class="node-name">docker-compose.yml</span>
+                                </div>
+                            </div>
+                            <div class="tree-node file">
+                                <div class="node-content">
+                                    <i class="fas fa-terminal"></i>
+                                    <span class="node-name">install.sh</span>
+                                </div>
+                            </div>
+
+                            <!-- Modules Directory -->
+                            <div class="tree-node directory">
+                                <div class="node-content">
+                                    <i class="fas fa-folder"></i>
+                                    <span class="node-name">modules/</span>
+                                </div>
+                                <div class="tree-branch">
+                                    <div class="tree-node file">
+                                        <div class="node-content">
+                                            <i class="fas fa-file-code"></i>
+                                            <span class="node-name">__init__.py</span>
+                                        </div>
+                                    </div>
+                                    <div class="tree-node file">
+                                        <div class="node-content">
+                                            <i class="fas fa-search"></i>
+                                            <span class="node-name">portscan.py</span>
+                                        </div>
+                                    </div>
+                                    <div class="tree-node file">
+                                        <div class="node-content">
+                                            <i class="fas fa-lock"></i>
+                                            <span class="node-name">sslinfo.py</span>
+                                        </div>
+                                    </div>
+                                    <div class="tree-node file">
+                                        <div class="node-content">
+                                            <i class="fas fa-sitemap"></i>
+                                            <span class="node-name">subdom.py</span>
+                                        </div>
+                                    </div>
+                                    <div class="tree-node file">
+                                        <div class="node-content">
+                                            <i class="fas fa-archive"></i>
+                                            <span class="node-name">wayback.py</span>
+                                        </div>
+                                    </div>
+                                    <div class="tree-node file">
+                                        <div class="node-content">
+                                            <i class="fas fa-globe"></i>
+                                            <span class="node-name">whois.py</span>
+                                        </div>
+                                    </div>
+                                    <div class="tree-node file">
+                                        <div class="node-content">
+                                            <i class="fas fa-spider"></i>
+                                            <span class="node-name">crawler.py</span>
+                                        </div>
+                                    </div>
+                                    <div class="tree-node file">
+                                        <div class="node-content">
+                                            <i class="fas fa-folder"></i>
+                                            <span class="node-name">dirrec.py</span>
+                                        </div>
+                                    </div>
+                                    <div class="tree-node file">
+                                        <div class="node-content">
+                                            <i class="fas fa-network-wired"></i>
+                                            <span class="node-name">dns.py</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Subdomain Modules -->
+                                    <div class="tree-node directory">
+                                        <div class="node-content">
+                                            <i class="fas fa-folder"></i>
+                                            <span class="node-name">subdomain_modules/</span>
+                                        </div>
+                                        <div class="tree-branch">
+                                            <div class="tree-node file">
+                                                <div class="node-content">
+                                                    <i class="fas fa-shield-alt"></i>
+                                                    <span class="node-name">virustotal_subs.py</span>
+                                                </div>
+                                            </div>
+                                            <div class="tree-node file">
+                                                <div class="node-content">
+                                                    <i class="fas fa-eye"></i>
+                                                    <span class="node-name">shodan_subs.py</span>
+                                                </div>
+                                            </div>
+                                            <div class="tree-node file">
+                                                <div class="node-content">
+                                                    <i class="fas fa-search"></i>
+                                                    <span class="node-name">zoomeye_subs.py</span>
+                                                </div>
+                                            </div>
+                                            <div class="tree-node file">
+                                                <div class="node-content">
+                                                    <i class="fas fa-certificate"></i>
+                                                    <span class="node-name">crtsh_subs.py</span>
+                                                </div>
+                                            </div>
+                                            <div class="tree-node file">
+                                                <div class="node-content">
+                                                    <i class="fas fa-database"></i>
+                                                    <span class="node-name">alienvault_subs.py</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- App Directory -->
+                            <div class="tree-node directory">
+                                <div class="node-content">
+                                    <i class="fas fa-folder"></i>
+                                    <span class="node-name">app/</span>
+                                </div>
+                                <div class="tree-branch">
+                                    <div class="tree-node file">
+                                        <div class="node-content">
+                                            <i class="fas fa-file-code"></i>
+                                            <span class="node-name">main.py</span>
+                                        </div>
+                                    </div>
+                                    <div class="tree-node file">
+                                        <div class="node-content">
+                                            <i class="fas fa-play"></i>
+                                            <span class="node-name">run.py</span>
+                                        </div>
+                                    </div>
+                                    <div class="tree-node file">
+                                        <div class="node-content">
+                                            <i class="fas fa-database"></i>
+                                            <span class="node-name">redtoolkit.db</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- API Directory -->
+                                    <div class="tree-node directory">
+                                        <div class="node-content">
+                                            <i class="fas fa-folder"></i>
+                                            <span class="node-name">api/</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Core Directory -->
+                                    <div class="tree-node directory">
+                                        <div class="node-content">
+                                            <i class="fas fa-folder"></i>
+                                            <span class="node-name">core/</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Data Directory -->
+                                    <div class="tree-node directory">
+                                        <div class="node-content">
+                                            <i class="fas fa-folder"></i>
+                                            <span class="node-name">data/</span>
+                                        </div>
+                                        <div class="tree-branch">
+                                            <div class="tree-node directory">
+                                                <div class="node-content">
+                                                    <i class="fas fa-folder"></i>
+                                                    <span class="node-name">wordlists/</span>
+                                                </div>
+                                                <div class="tree-branch">
+                                                    <div class="tree-node file">
+                                                        <div class="node-content">
+                                                            <i class="fas fa-file-alt"></i>
+                                                            <span class="node-name">dirb_big.txt</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tree-node file">
+                                                        <div class="node-content">
+                                                            <i class="fas fa-file-alt"></i>
+                                                            <span class="node-name">dirb_common.txt</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tree-node file">
+                                                        <div class="node-content">
+                                                            <i class="fas fa-file-alt"></i>
+                                                            <span class="node-name">dirb_small.txt</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Configuration Directory -->
+                            <div class="tree-node directory">
+                                <div class="node-content">
+                                    <i class="fas fa-folder"></i>
+                                    <span class="node-name">conf/</span>
+                                </div>
+                                <div class="tree-branch">
+                                    <div class="tree-node file">
+                                        <div class="node-content">
+                                            <i class="fas fa-cog"></i>
+                                            <span class="node-name">config.json</span>
+                                        </div>
+                                    </div>
+                                    <div class="tree-node file">
+                                        <div class="node-content">
+                                            <i class="fas fa-key"></i>
+                                            <span class="node-name">keys.json</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="framework-features dark">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">02</span>
+                    KEY COMPONENTS
+                </h2>
+                <p class="section-subtitle">Core Modules & Functionality</p>
+            </div>
+
+            <div class="components-grid">
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Reconnaissance</h3>
+                    <p>Comprehensive target discovery with subdomain enumeration, WHOIS lookup, and DNS analysis</p>
+                    <div class="component-modules">
+                        <span>Subdomain Scanner</span>
+                        <span>WHOIS Lookup</span>
+                        <span>DNS Analysis</span>
+                    </div>
+                </div>
+
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Vulnerability Scanning</h3>
+                    <p>Advanced security testing with port scanning, SSL analysis, and directory brute-forcing</p>
+                    <div class="component-modules">
+                        <span>Port Scanner</span>
+                        <span>SSL Analyzer</span>
+                        <span>Directory Brute-force</span>
+                    </div>
+                </div>
+
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Integration</h3>
+                    <p>Multiple data sources including VirusTotal, Shodan, ZoomEye, and 12+ other platforms</p>
+                    <div class="component-modules">
+                        <span>VirusTotal API</span>
+                        <span>Shodan API</span>
+                        <span>ZoomEye API</span>
+                    </div>
+                </div>
+
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Interface</h3>
+                    <p>Modern React frontend with FastAPI backend for real-time scanning and reporting</p>
+                    <div class="component-modules">
+                        <span>FastAPI Backend</span>
+                        <span>React Frontend</span>
+                        <span>Real-time Updates</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="framework-actions">
+        <div class="section-container">
+            <div class="action-content">
+                <h2>Ready to Explore the Framework?</h2>
+                <p>Get started with the Red Horn Security Testing Framework today</p>
+                <div class="action-buttons">
+                    <a href="#" class="cyber-btn primary">
+                        <span class="btn-text">VIEW ON GITHUB</span>
+                        <div class="btn-glow"></div>
+                    </a>
+                    <a href="demo.html" class="cyber-btn secondary">
+                        <span class="btn-text">LIVE DEMO</span>
+                        <div class="btn-glow"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cyber-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <p>Advanced Security Testing Framework</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="framework.html">Framework</a>
+                    <a href="demo.html">Demo</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://github.com/redhorn" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/redhorn/" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Red Horn Security. All rights reserved. | A Summer Program Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script src="framework-script.js"></script>
+</body>
+</html>

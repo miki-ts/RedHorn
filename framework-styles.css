@@ -1,0 +1,315 @@
+/* Framework Page Specific Styles */
+.framework-hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+}
+
+.framework-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.framework-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.framework-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 0, 60, 0.1);
+    border: 1px solid var(--primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.framework-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.framework-subtitle {
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.framework-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+/* Structure Tree Styles */
+.framework-structure {
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.structure-tree {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 0, 60, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.tree-container {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+.tree-node {
+    margin: 0.25rem 0;
+    position: relative;
+}
+
+.node-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.node-content:hover {
+    background: rgba(255, 0, 60, 0.1);
+    transform: translateX(5px);
+}
+
+.tree-node.directory .node-content {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.tree-node.file .node-content {
+    color: var(--light);
+}
+
+.tree-node.root .node-content {
+    color: var(--primary);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.tree-node i {
+    width: 16px;
+    text-align: center;
+}
+
+.tree-branch {
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+.tree-branch::before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(255, 0, 60, 0.3);
+}
+
+.tree-node .tree-branch {
+    border-left: 1px solid rgba(255, 0, 60, 0.2);
+    margin-left: 0.75rem;
+    padding-left: 0.75rem;
+}
+
+/* Components Grid */
+.framework-features {
+    padding: 6rem 2rem;
+}
+
+.components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.component-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 0, 60, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.component-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: var(--glow-primary);
+}
+
+.component-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 0, 60, 0.1);
+    border: 2px solid rgba(255, 0, 60, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.component-card:hover .component-icon {
+    background: rgba(255, 0, 60, 0.2);
+    border-color: var(--primary);
+    transform: scale(1.1);
+}
+
+.component-icon i {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.component-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--light);
+}
+
+.component-card p {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.component-modules {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.component-modules span {
+    background: rgba(255, 0, 60, 0.1);
+    color: var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Framework Actions */
+.framework-actions {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.action-content h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--light);
+}
+
+.action-content p {
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-bottom: 3rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .framework-title {
+        font-size: 2.5rem;
+    }
+    
+    .framework-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .structure-tree {
+        padding: 1rem;
+        overflow-x: auto;
+    }
+    
+    .tree-container {
+        font-size: 0.8rem;
+        min-width: 500px;
+    }
+    
+    .components-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cyber-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .framework-hero {
+        padding: 6rem 1rem 2rem;
+    }
+    
+    .framework-title {
+        font-size: 2rem;
+    }
+    
+    .framework-subtitle {
+        font-size: 1rem;
+    }
+    
+    .tree-container {
+        font-size: 0.75rem;
+        min-width: 400px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
