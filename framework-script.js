@@ -193,6 +193,12 @@ function initFrameworkLoading() {
 initFrameworkLoading();
 
 
+// Clean URL handling
+if (window.location.pathname.includes('framework.html')) {
+    window.history.replaceState(null, null, '/');
+}
+
+
 
 
 
