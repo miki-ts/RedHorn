@@ -319,30 +319,13 @@ function initAnimations() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* script.js - cleaned, fixed, mobile-friendly nav & preserved effects */
-
 document.addEventListener('DOMContentLoaded', () => {
-    // remove potential preloader after DOM ready
+
     setTimeout(() => {
         const loading = document.querySelector('.loading');
         if (loading) loading.remove();
     }, 800);
 
-    // initialize features
     initParticlesSafe();
     initNavigation();
     initCounters();
@@ -356,7 +339,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initLoadingScreen();
 });
 
-/* --- Particles: only if library loaded --- */
 function initParticlesSafe(){
     if (typeof particlesJS !== 'undefined') {
         try {
@@ -379,21 +361,19 @@ function initParticlesSafe(){
         } catch(e) { console.warn('particlesJS failed to init', e); }
     }
 }
-
-/* --- Navigation & mobile toggle --- */
+ 
 function initNavigation(){
     const navToggle = document.querySelector('.nav-toggle');
     const navLinksContainer = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    // create mobile instance container when opening
     function openMobileMenu(){
         if (!navLinksContainer.classList.contains('mobile')) {
             navLinksContainer.classList.add('mobile');
             navToggle.setAttribute('aria-expanded', 'true');
-            // make focusable and trap focus if needed (basic)
+  
             navLinksContainer.querySelectorAll('a').forEach(a => a.setAttribute('tabindex','0'));
-            // close on outside click
+
             setTimeout(() => document.addEventListener('click', outsideClickClose), 10);
         }
     }
@@ -411,7 +391,6 @@ function initNavigation(){
         }
     }
 
-    // hamburger toggle
     if (navToggle) {
         navToggle.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -419,8 +398,6 @@ function initNavigation(){
             if (expanded) closeMobileMenu(); else openMobileMenu();
         });
     }
-
-    // smooth scroll and close menu on link click
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -429,12 +406,11 @@ function initNavigation(){
             if (targetSection) {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             }
-            // close mobile after navigation
+
             closeMobileMenu();
         });
     });
 
-    // highlight active section on scroll
     const sections = document.querySelectorAll('section');
     window.addEventListener('scroll', () => {
         let current = '';
@@ -451,7 +427,6 @@ function initNavigation(){
     }, { passive: true });
 }
 
-/* --- Counters --- */
 function initCounters(){
     const counters = document.querySelectorAll('.stat-number');
     if (!counters.length) return;
@@ -477,7 +452,6 @@ function initCounters(){
     counters.forEach(c => observer.observe(c));
 }
 
-/* --- Scroll-based reveal animations --- */
 function initScrollEffects(){
     const animatedElements = document.querySelectorAll('.feature-card, .tech-card, .workflow-step, .team-member, .value-card');
     if (!animatedElements.length) return;
@@ -497,8 +471,6 @@ function initScrollEffects(){
         observer.observe(el);
     });
 }
-
-/* --- Typing effect for hero title --- */
 function initHeroTyping(){
     const heroTitle = document.querySelector('.hero-title');
     if (!heroTitle) return;
@@ -532,8 +504,6 @@ function initHeroTyping(){
     }
     setTimeout(typeWriter, 500);
 }
-
-/* --- Button micro animations --- */
 function initButtonsHover(){
     const buttons = document.querySelectorAll('.cyber-btn');
     buttons.forEach(btn => {
@@ -542,7 +512,6 @@ function initButtonsHover(){
     });
 }
 
-/* --- Contact form micro UX (no network) --- */
 function initForm(){
     const contactForm = document.querySelector('.contact-form form');
     if (!contactForm) return;
@@ -566,7 +535,6 @@ function initForm(){
     });
 }
 
-/* --- Logo parallax & interactions --- */
 function initLogoInteractions(){
     const cyberGrid = document.querySelector('.cyber-grid');
     const gridLogo = document.querySelector('.grid-logo');
@@ -584,8 +552,6 @@ function initLogoInteractions(){
         setTimeout(() => gridLogo.style.transform = 'scale(1)', 260);
     });
 }
-
-/* --- Cursor trail (subtle) --- */
 function initCursorTrail(){
     const cursor = document.createElement('div');
     cursor.className = 'cursor-trail';
@@ -605,7 +571,6 @@ function initCursorTrail(){
     });
 }
 
-/* --- Team card interactions & reveal --- */
 function initTeamAnimations(){
     const members = document.querySelectorAll('.team-member');
     if (!members.length) return;
@@ -622,7 +587,6 @@ function initTeamAnimations(){
     });
 }
 
-/* --- Loading screen fallback for fast/slow load --- */
 function initLoadingScreen(){
     const loadingScreen = document.createElement('div');
     loadingScreen.className = 'loading';
@@ -642,14 +606,11 @@ function initLoadingScreen(){
         }, 900);
     });
 }
-
-/* --- small helper key scrolls --- */
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowDown') window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
     if (e.key === 'ArrowUp')   window.scrollBy({ top: -window.innerHeight, behavior: 'smooth' });
 }, { passive: true });
 
-/* spin animation keyframes backup (in case CSS missing) */
 (function addSpinKeyframe(){
     const style = document.createElement('style');
     style.textContent = '@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}';
