@@ -184,7 +184,6 @@ function initNotifyForm() {
             return;
         }
 
-        // Simulate form submission
         const originalText = submitBtn.querySelector('.btn-text').textContent;
         submitBtn.querySelector('.btn-text').textContent = 'SUBSCRIBING...';
         submitBtn.disabled = true;
