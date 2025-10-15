@@ -1,4 +1,3 @@
-// Framework Page Specific JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     initFrameworkAnimations();
     initTreeInteractions();
@@ -63,7 +62,6 @@ function initFrameworkParticles() {
 }
 
 function initFrameworkAnimations() {
-    // Animate component cards on scroll
     const componentCards = document.querySelectorAll('.component-card');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -101,7 +99,6 @@ function initTreeInteractions() {
     treeNodes.forEach(node => {
         const branch = node.querySelector('.tree-branch');
         if (branch) {
-            // Initially collapse all branches
             branch.style.display = 'none';
             
             node.addEventListener('click', function(e) {
@@ -116,8 +113,6 @@ function initTreeInteractions() {
                     node.classList.add('expanded');
                 }
             });
-            
-            // Add expand/collapse indicator
             const icon = node.querySelector('.node-content i');
             if (icon) {
                 icon.classList.add('fa-folder');
@@ -135,8 +130,6 @@ function initTreeInteractions() {
             }
         }
     });
-
-    // Expand root node by default
     const rootNode = document.querySelector('.tree-node.root');
     if (rootNode) {
         const rootBranch = rootNode.querySelector('.tree-branch');
@@ -152,7 +145,6 @@ function initTreeInteractions() {
     }
 }
 
-// Add keyboard navigation for tree
 document.addEventListener('keydown', function(e) {
     if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
         const focused = document.activeElement;
@@ -172,7 +164,6 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// Loading screen functionality for framework page
 function initFrameworkLoading() {
     const loadingScreen = document.getElementById('loading-screen');
     
@@ -188,7 +179,6 @@ function initFrameworkLoading() {
             }, 1000);
         });
 
-        // Fallback
         setTimeout(() => {
             if (loadingScreen.style.display !== 'none') {
                 loadingScreen.classList.add('fade-out');
@@ -200,7 +190,6 @@ function initFrameworkLoading() {
     }
 }
 
-// Initialize loading screen
 initFrameworkLoading();
 
 
