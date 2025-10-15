@@ -707,3 +707,9 @@ navLinks.forEach(link => {
         }
     });
 });
+
+
+// Clean URL handling
+if (window.location.pathname.includes('index.html')) {
+    window.history.replaceState(null, null, '/');
+}
