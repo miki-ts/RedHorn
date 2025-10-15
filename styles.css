@@ -1477,21 +1477,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-/* Base reset & variables */
-
-
-
-/* NAV */
 .cyber-nav{
     position:fixed; top:0; left:0; right:0; background:rgba(10,10,15,0.9);
     border-bottom:1px solid rgba(255,0,60,0.18); z-index:1100; padding:0.75rem 0; backdrop-filter:blur(8px);
@@ -1506,8 +1491,6 @@ body {
     font-family:'Orbitron', monospace; font-weight:900; font-size:1.2rem; background:var(--gradient-primary);
     -webkit-background-clip:text; -webkit-text-fill-color:transparent; text-transform:uppercase; letter-spacing:2px;
 }
-
-/* Links (desktop) */
 .nav-links{ display:flex; gap:1rem; align-items:center; }
 .nav-link{
     color:var(--gray); text-decoration:none; font-weight:600; text-transform:uppercase; letter-spacing:1px;
@@ -1519,14 +1502,12 @@ body {
 }
 .nav-link:hover::after, .nav-link.active::after{ width:100%; }
 
-/* Hamburger (mobile) */
 .nav-toggle{
     display:none; background:transparent; border:0; cursor:pointer; padding:0.25rem; align-items:center;
 }
 .hamburger{ display:inline-flex; flex-direction:column; gap:5px; width:26px; height:18px; justify-content:center; }
 .hamburger span{ display:block; height:2px; background:var(--light); border-radius:2px; transition:all .25s; }
 
-/* Mobile menu panel (animated) */
 .nav-links.mobile{
     position:fixed; inset:60px 16px auto 16px; background:rgba(5,5,8,0.95); border-radius:12px; padding:1rem;
     display:flex; flex-direction:column; gap:0.5rem; box-shadow:0 10px 30px rgba(0,0,0,0.6); z-index:1050;
@@ -1534,7 +1515,6 @@ body {
 }
 @keyframes navIn { from{ transform:scale(.98) translateY(-6px); opacity:0 } to{ transform:none; opacity:1 } }
 
-/* Buttons */
 .cyber-btn{ position:relative; background:transparent; border:2px solid var(--primary); color:var(--light);
     padding:0.6rem 1.2rem; text-transform:uppercase; font-weight:700; cursor:pointer; overflow:hidden; display:inline-flex; align-items:center; justify-content:center;
 }
@@ -1542,7 +1522,6 @@ body {
 .cyber-btn .btn-glow{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:100%; height:100%; filter:blur(18px); opacity:0; transition:opacity .25s; }
 .cyber-btn:hover .btn-glow{ opacity:.25; }
 
-/* Hero */
 .cyber-hero{ min-height:80vh; display:flex; align-items:center; padding:6.5rem 1rem 3rem; }
 .hero-container{ max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:center; }
 .hero-content{ z-index:2; }
@@ -1551,35 +1530,29 @@ body {
 .title-line{ display:block; }
 .title-line.accent{ background:var(--gradient-primary); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
 
-
-/* Visual */
 .hero-visual{ display:flex; align-items:center; justify-content:center; position:relative; }
 .cyber-grid{ width:420px; height:420px; display:flex; align-items:center; justify-content:center; position:relative; }
 .grid-logo{ height:300px; width:auto; animation:logoFloat 4s ease-in-out infinite; }
 @keyframes logoFloat { 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-8px) } }
 
-/* floating cards */
 .floating-elements{ position:absolute; inset:0; pointer-events:none; }
 .floating-card{ position:absolute; background:rgba(255,255,255,0.04); padding:.8rem .9rem; border-radius:10px; border:1px solid rgba(255,0,60,0.12); display:flex; gap:.5rem; align-items:center; font-size:.9rem; animation:float 6s ease-in-out infinite; }
 @keyframes float { 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-10px) } }
 
-/* Sections */
 .cyber-section{ padding:4rem 1rem; }
 .section-container{ max-width:1100px; margin:0 auto; }
 .section-header{ text-align:center; margin-bottom:2.5rem; }
 .section-title{ font-family:'Orbitron'; font-size:2rem; margin-bottom:.5rem; }
 .section-subtitle{ color:var(--gray); }
 
-/* responsive helpers */
 @media (max-width:1024px){
     .hero-container{ grid-template-columns:1fr; text-align:center; }
     .cyber-grid{ width:320px; height:320px; }
     .grid-logo{ height:180px; }
-    .nav-links{ display:none; } /* hide desktop links */
-    .nav-toggle{ display:flex; } /* show hamburger */
+    .nav-links{ display:none; } 
+    .nav-toggle{ display:flex; } 
 }
 
-/* mobile specific */
 @media (max-width:768px){
     .hero-title{ font-size:2.2rem; }
     .brand-text{ font-size:1rem; }
@@ -1589,8 +1562,6 @@ body {
     .floating-card{ font-size:.8rem; padding:.6rem; }
     .cyber-hero{ padding:5.5rem 0 3rem; }
 }
-
-/* small devices */
 @media (max-width:420px){
     .hero-subtitle{ font-size:.95rem; padding:0 1rem; }
     .hero-actions{ flex-direction:column; gap:.6rem; align-items:center; }
