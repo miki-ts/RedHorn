@@ -1,4 +1,3 @@
-/* Framework Page Specific Styles */
 .framework-hero {
     min-height: 80vh;
     display: flex;
@@ -53,7 +52,6 @@
     margin-top: 3rem;
 }
 
-/* Structure Tree Styles */
 .framework-structure {
     padding: 6rem 2rem;
     position: relative;
@@ -134,7 +132,6 @@
     padding-left: 0.75rem;
 }
 
-/* Components Grid */
 .framework-features {
     padding: 6rem 2rem;
 }
@@ -215,7 +212,6 @@
     font-weight: 600;
 }
 
-/* Framework Actions */
 .framework-actions {
     padding: 6rem 2rem;
     text-align: center;
@@ -242,7 +238,6 @@
     flex-wrap: wrap;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .framework-title {
         font-size: 2.5rem;
