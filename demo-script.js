@@ -384,3 +384,7 @@ document.addEventListener('DOMContentLoaded', function() {
         duplicateLoading.remove();
     }
 });
+
+if (window.location.pathname.includes('demo.html')) {
+    window.history.replaceState(null, null, '/');
+}
