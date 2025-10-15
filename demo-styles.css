@@ -32,7 +32,6 @@ body {
     line-height: 1.6;
 }
 
-/* Navigation */
 .cyber-nav {
     position: fixed;
     top: 0;
@@ -89,8 +88,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-
-/* Cyber Button */
 .cyber-btn {
     position: relative;
     background: transparent;
@@ -168,8 +165,6 @@ body {
 .cyber-btn:hover .btn-glow {
     opacity: 0.3;
 }
-
-/* Coming Soon Hero */
 .coming-soon-hero {
     min-height: 100vh;
     display: flex;
@@ -241,8 +236,6 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-
-/* Progress Section */
 .progress-section {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -309,8 +302,6 @@ body {
     font-size: 0.85rem;
     line-height: 1.4;
 }
-
-/* Countdown Section */
 .countdown-section {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -361,7 +352,6 @@ body {
     color: var(--gray);
 }
 
-/* Features Preview */
 .features-preview {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -413,7 +403,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Notify Section */
 .notify-section {
     text-align: center;
     padding: 0 0.5rem;
@@ -457,7 +446,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Footer */
 .cyber-footer {
     background: var(--darker);
     border-top: 1px solid rgba(255, 0, 60, 0.3);
@@ -489,7 +477,6 @@ body {
     line-height: 1.4;
 }
 
-/* Particles */
 #particles-js {
     position: fixed;
     top: 0;
@@ -498,8 +485,6 @@ body {
     height: 100%;
     z-index: -1;
 }
-
-/* Animations */
 @keyframes pulse {
     0% { opacity: 0.3; }
     100% { opacity: 0.6; }
@@ -509,8 +494,6 @@ body {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
 }
-
-/* Tablet Styles */
 @media (min-width: 768px) {
     .nav-container {
         padding: 0 2rem;
@@ -558,8 +541,6 @@ body {
         flex-direction: row;
     }
 }
-
-/* Desktop Styles */
 @media (min-width: 1024px) {
     .coming-soon-title {
         font-size: 4rem;
@@ -588,8 +569,6 @@ body {
         padding: 1.25rem;
     }
 }
-
-/* Large Desktop Styles */
 @media (min-width: 1200px) {
     .coming-soon-container {
         max-width: 900px;
@@ -599,8 +578,6 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-/* Small Mobile Devices */
 @media (max-width: 360px) {
     .nav-container {
         padding: 0 0.75rem;
@@ -673,8 +650,6 @@ body {
         font-size: 0.9rem;
     }
 }
-
-/* Landscape Mode for Mobile */
 @media (max-height: 600px) and (orientation: landscape) {
     .coming-soon-hero {
         min-height: auto;
@@ -707,7 +682,6 @@ body {
     }
 }
 
-/* High DPI Screens */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .cyber-btn,
     .cyber-input,
