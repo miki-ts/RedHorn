@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize particles with mobile-optimized settings
     if (typeof particlesJS !== 'undefined') {
         particlesJS('particles-js', {
             particles: {
@@ -54,22 +53,16 @@ document.addEventListener('DOMContentLoaded', function() {
             retina_detect: true
         });
     }
-
-    // Initialize countdown timer
     initCountdown();
 
-    // Initialize form submission
     initNotifyForm();
 
-    // Initialize animations
     initAnimations();
 
-    // Handle window resize
     window.addEventListener('resize', handleResize);
 });
 
 function handleResize() {
-    // Reinitialize particles on resize for mobile optimization
     if (typeof particlesJS !== 'undefined' && window.pJSDom && window.pJSDom[0]) {
         window.pJSDom[0].pJS.fn.vendors.destroy();
         setTimeout(() => {
@@ -134,7 +127,6 @@ function getParticlesConfig() {
 }
 
 function initCountdown() {
-    // Set launch date to 30 days from now
     const launchDate = new Date();
     launchDate.setDate(launchDate.getDate() + 30);
     launchDate.setHours(12, 0, 0, 0);
@@ -166,8 +158,6 @@ function initCountdown() {
             }
         }
     }
-
-    // Update countdown immediately and then every second
     updateCountdown();
     const countdownTimer = setInterval(updateCountdown, 1000);
 }
@@ -212,8 +202,6 @@ function initNotifyForm() {
             }, 2000);
         }, 1500);
     });
-
-    // Add touch-friendly input styling
     emailInput.addEventListener('focus', function() {
         this.style.transform = 'scale(1.02)';
     });
@@ -232,8 +220,6 @@ function showNotification(message, type) {
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
     notification.textContent = message;
-    
-    // Mobile-optimized notification positioning
     const isMobile = window.innerWidth < 768;
     
     notification.style.cssText = `
@@ -270,7 +256,6 @@ function showNotification(message, type) {
 }
 
 function initAnimations() {
-    // Animate progress bar
     const progressFill = document.querySelector('.progress-fill');
     if (progressFill) {
         progressFill.style.width = '0%';
@@ -280,11 +265,8 @@ function initAnimations() {
             progressFill.style.width = '70%';
         }, 500);
     }
-
-    // Add touch-friendly interactions to preview items
     const previewItems = document.querySelectorAll('.preview-item');
     previewItems.forEach(item => {
-        // Mouse interactions for desktop
         item.addEventListener('mouseenter', function() {
             if (window.innerWidth > 768) {
                 this.style.transform = 'translateY(-5px)';
@@ -296,8 +278,6 @@ function initAnimations() {
                 this.style.transform = 'translateY(0)';
             }
         });
-
-        // Touch interactions for mobile
         item.addEventListener('touchstart', function() {
             this.style.transform = 'translateY(-2px) scale(1.02)';
         }, { passive: true });
@@ -306,19 +286,14 @@ function initAnimations() {
             this.style.transform = 'translateY(0) scale(1)';
         }, { passive: true });
     });
-
-    // Add touch-friendly button interactions
     const buttons = document.querySelectorAll('.cyber-btn');
     buttons.forEach(btn => {
-        // Click effect
         btn.addEventListener('click', function() {
             this.style.transform = 'scale(0.95)';
             setTimeout(() => {
                 this.style.transform = 'scale(1)';
             }, 150);
         });
-
-        // Touch feedback for mobile
         btn.addEventListener('touchstart', function() {
             this.style.transform = 'scale(0.98)';
         }, { passive: true });
@@ -328,64 +303,33 @@ function initAnimations() {
         }, { passive: true });
     });
 
-    // Prevent zoom on double-tap for buttons
     buttons.forEach(btn => {
         btn.addEventListener('touchend', function(e) {
             e.preventDefault();
         }, { passive: false });
     });
-
-    // Improve scrolling performance on mobile
     document.body.style.webkitOverflowScrolling = 'touch';
 }
-
-// Add viewport meta tag dynamically for better mobile control
 const viewportMeta = document.createElement('meta');
 viewportMeta.name = 'viewport';
 viewportMeta.content = 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes';
 document.head.appendChild(viewportMeta);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Loading Screen Functionality
 function initLoadingScreen() {
     const loadingScreen = document.getElementById('loading-screen');
     
     if (loadingScreen) {
-        // Show loading screen
         loadingScreen.style.display = 'flex';
-        
-        // Hide loading screen when page is fully loaded
         window.addEventListener('load', function() {
             setTimeout(() => {
                 loadingScreen.classList.add('fade-out');
                 
-                // Remove from DOM after animation completes
                 setTimeout(() => {
                     loadingScreen.style.display = 'none';
                 }, 500);
-            }, 1500); // Minimum show time for smooth UX
+            }, 1500); 
         });
 
-        // Fallback: if page takes too long to load, hide loading screen anyway
         setTimeout(() => {
             if (loadingScreen.style.display !== 'none') {
                 loadingScreen.classList.add('fade-out');
@@ -393,15 +337,13 @@ function initLoadingScreen() {
                     loadingScreen.style.display = 'none';
                 }, 500);
             }
-        }, 5000); // Maximum 5 seconds
+        }, 5000); 
     }
 }
 
-// Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     initLoadingScreen();
     
-    // Your other initialization code here...
     if (typeof particlesJS !== 'undefined') {
         particlesJS('particles-js', {
             particles: {
@@ -438,8 +380,6 @@ document.addEventListener('DOMContentLoaded', function() {
             retina_detect: true
         });
     }
-    
-    // Remove any duplicate loading elements
     const duplicateLoading = document.querySelector('.loading:not(#loading-screen)');
     if (duplicateLoading) {
         duplicateLoading.remove();
