@@ -617,40 +617,23 @@ document.addEventListener('keydown', (e) => {
     document.head.appendChild(style);
 })();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Loading Screen Functionality
 function initLoadingScreen() {
     const loadingScreen = document.getElementById('loading-screen');
     
     if (loadingScreen) {
-        // Show loading screen
+
         loadingScreen.style.display = 'flex';
-        
-        // Hide loading screen when page is fully loaded
+       
         window.addEventListener('load', function() {
             setTimeout(() => {
                 loadingScreen.classList.add('fade-out');
                 
-                // Remove from DOM after animation completes
                 setTimeout(() => {
                     loadingScreen.style.display = 'none';
                 }, 500);
-            }, 1500); // Minimum show time for smooth UX
+            }, 1500); 
         });
 
-        // Fallback: if page takes too long to load, hide loading screen anyway
         setTimeout(() => {
             if (loadingScreen.style.display !== 'none') {
                 loadingScreen.classList.add('fade-out');
@@ -658,15 +641,13 @@ function initLoadingScreen() {
                     loadingScreen.style.display = 'none';
                 }, 500);
             }
-        }, 5000); // Maximum 5 seconds
+        }, 5000);
     }
 }
 
-// Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     initLoadingScreen();
     
-    // Your other initialization code here...
     if (typeof particlesJS !== 'undefined') {
         particlesJS('particles-js', {
             particles: {
@@ -703,43 +684,21 @@ document.addEventListener('DOMContentLoaded', function() {
             retina_detect: true
         });
     }
-    
-    // Remove any duplicate loading elements
     const duplicateLoading = document.querySelector('.loading:not(#loading-screen)');
     if (duplicateLoading) {
         duplicateLoading.remove();
     }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Update navigation to include framework page
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         const targetHref = link.getAttribute('href');
         
-        // Handle internal page navigation
         if (targetHref.includes('.html')) {
             e.preventDefault();
             window.location.href = targetHref;
         } else {
-            // Handle anchor links on same page
             e.preventDefault();
             const targetSection = document.querySelector(targetHref);
             if (targetSection) {
