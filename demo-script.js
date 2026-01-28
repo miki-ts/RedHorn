@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 opacity: { 
                     value: window.innerWidth < 768 ? 0.4 : 0.5,
                     random: true 
-                },
+               },
                 size: { 
                     value: window.innerWidth < 768 ? 2 : 3,
                     random: true 
