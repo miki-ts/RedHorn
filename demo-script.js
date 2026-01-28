@@ -106,7 +106,7 @@ function getParticlesConfig() {
                 straight: false,
                 out_mode: "out",
                 bounce: false
-            }
+           }
         },
         interactivity: {
             detect_on: "canvas",
