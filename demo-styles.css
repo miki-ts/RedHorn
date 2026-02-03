@@ -16,7 +16,7 @@
     --cyber-blue: #0066ff;
     --neon-purple: #b300ff;
     
-    --gradient-primary: linear-gradient(135deg, var(--primary), var(--neon-purple));
+   --gradient-primary: linear-gradient(135deg, var(--primary), var(--neon-purple));
     --gradient-secondary: linear-gradient(135deg, var(--secondary), var(--cyber-blue));
     --gradient-bg: linear-gradient(135deg, var(--darker), var(--dark));
     
