@@ -28,7 +28,7 @@
 body {
     font-family: 'Exo 2', sans-serif;
     background: var(--gradient-bg);
-    color: var(--light);
+    color: var(--light); 
     overflow-x: hidden;
     line-height: 1.6;
 }
