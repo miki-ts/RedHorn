@@ -95,7 +95,7 @@
     font-weight: 600;
 }
 
-.tree-node.file .node-content {
+.tree-node.file .node-content { 
     color: var(--light);
 }
 
