@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     padding: 8rem 2rem 4rem;
-    position: relative;
+    position: relative; 
 }
 
 .framework-container {
