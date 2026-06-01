@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         enable: true, 
                         value_area: window.innerWidth < 768 ? 600 : 800 
                     }
-                },
+                }, 
                 color: { value: "#ff003c" },
                 shape: { type: "circle" },
                 opacity: { 
