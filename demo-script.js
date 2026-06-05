@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typeof particlesJS !== 'undefined') {
         particlesJS('particles-js', {
             particles: {
-                number: {  
+                number: {   
                     value: window.innerWidth < 768 ? 40 : 60, 
                     density: { 
                         enable: true,  
