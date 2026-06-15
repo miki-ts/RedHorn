@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
             particles: {  
                 number: {   
                     value: window.innerWidth < 768 ? 40 : 60,  
-                    density: { 
+                    density: {  
                         enable: true,     
                         value_area: window.innerWidth < 768 ? 600 : 800     
                     }  
