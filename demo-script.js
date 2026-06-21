@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     value: window.innerWidth < 768 ? 2 : 3,
                     random: true 
                 },
-                line_linked: {
+                line_linked: { 
                     enable: window.innerWidth > 768,
                     distance: 150,
                     color: "#ff003c",
