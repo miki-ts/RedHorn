@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         value_area: window.innerWidth < 768 ? 600 : 800      
                     }  
                 },  
-                color: { value: "#ff003c" },
+                color: { value: "#ff003c" }, 
                 shape: { type: "circle" },     
                 opacity: {    
                     value: window.innerWidth < 768 ? 0.4 : 0.5,   
