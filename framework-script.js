@@ -18,7 +18,7 @@ function initFrameworkParticles() {
                 color: { value: "#ff003c" },
                 shape: { type: "circle" },
                 opacity: { 
-                    value: 0.3, 
+                    value: 0.3,  
                     random: true 
                 },
                 size: { 
