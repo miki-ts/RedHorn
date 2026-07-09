@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 number: {    
                     value: window.innerWidth < 768 ? 40 : 60,   
                     density: {   
-                        enable: true,       
+                        enable: true,        
                         value_area: window.innerWidth < 768 ? 600 : 800      
                     }   
                 },  
