@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     value: window.innerWidth < 768 ? 40 : 60,   
                     density: {   
                         enable: true,        
-                        value_area: window.innerWidth < 768 ? 600 : 800      
+                        value_area: window.innerWidth < 768 ? 600 : 800       
                     }   
                 },  
                 color: { value: "#ff003c" },   
