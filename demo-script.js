@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     enable: window.innerWidth > 768,
                     distance: 150,
                     color: "#ff003c",
-                    opacity: 0.2,
+                    opacity: 0.2, 
                     width: 1
                 },
                 move: {
