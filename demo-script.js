@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 shape: { type: "circle" },        
                 opacity: {    
                     value: window.innerWidth < 768 ? 0.4 : 0.5,    
-                    random: true   
+                    random: true    
                },   
                 size: { 
                     value: window.innerWidth < 768 ? 2 : 3,
