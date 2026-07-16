@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 detect_on: "canvas",
                 events: {
                     onhover: { 
-                        enable: window.innerWidth > 768,
+                        enable: window.innerWidth > 768, 
                         mode: "repulse" 
                     },
                     onclick: { 
