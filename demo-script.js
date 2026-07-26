@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     bounce: false 
                 }
             },
-            interactivity: {
+            interactivity: { 
                 detect_on: "canvas",
                 events: {
                     onhover: { 
