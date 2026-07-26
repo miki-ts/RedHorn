@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     speed: window.innerWidth < 768 ? 1.5 : 2,
                     direction: "none",
                     random: true,
-                    straight: false,
+                    straight: false, 
                     out_mode: "out",
                     bounce: false 
                 }
