@@ -20,7 +20,7 @@
     --gradient-secondary: linear-gradient(135deg, var(--secondary), var(--cyber-blue));
     --gradient-bg: linear-gradient(135deg, var(--darker), var(--dark));
     
-    --glow-primary: 0 0 20px rgba(255, 0, 60, 0.5);
+    --glow-primary: 0 0 20px rgba(255, 0, 60, 0.5); 
     --glow-secondary: 0 0 20px rgba(0, 240, 255, 0.5);
 }
 
