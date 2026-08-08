@@ -13,7 +13,7 @@
     --darker: #050508;  
    --light: #ffffff;   
     --gray: #8b8b9c;
-    --cyber-blue: #0066ff;
+    --cyber-blue: #0066ff; 
     --neon-purple: #b300ff;
     
    --gradient-primary: linear-gradient(135deg, var(--primary), var(--neon-purple));
