@@ -1,74 +1,80 @@
+/* ============================================
+   FRAMEWORK PAGE STYLES
+   ============================================ */
+
 .framework-hero {
     min-height: 80vh;
     display: flex;
     align-items: center;
     padding: 8rem 2rem 4rem;
-    position: relative; 
-} 
-
-.framework-container { 
-    max-width: 1200px; 
-    margin: 0 auto;
-    width: 100%; 
-}
-
-.framework-content {  
-    text-align: center;  
-    z-index: 2;
-}  
- 
-.framework-badge {
-    display: inline-flex; 
-    align-items: center;
-    background: rgba(255, 0, 60, 0.1);
-    border: 1px solid var(--primary);
-    padding: 0.5rem 1.5rem;
-    border-radius: 25px;
-    margin-bottom: 2rem;
     position: relative;
+    background: var(--bg-primary);
 }
 
-.framework-title {
-    font-family: 'Orbitron', monospace;
-    font-size: 3.5rem;
-    font-weight: 900;
-    line-height: 1.1;
+.framework-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.framework-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.framework-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-accent);
+    background: rgba(239, 68, 68, 0.05);
     margin-bottom: 1.5rem;
 }
 
+.framework-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
 .framework-subtitle {
-    font-size: 1.2rem;
-    color: var(--gray);
-    margin-bottom: 3rem;
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.7;
 }
 
 .framework-stats {
     display: flex;
     justify-content: center;
     gap: 3rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .framework-structure {
     padding: 6rem 2rem;
     position: relative;
+    background: var(--bg-secondary);
 }
 
 .structure-tree {
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 0, 60, 0.2);
-    border-radius: 15px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-lg);
     padding: 2rem;
     margin-top: 2rem;
 }
 
-.tree-container { 
-    font-family: 'Courier New', monospace;
-    font-size: 0.9rem;
+.tree-container {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.875rem;
 }
 
 .tree-node {
@@ -80,30 +86,30 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 0;
-    transition: all 0.3s ease;
-    border-radius: 5px;
+    padding: 0.375rem 0;
+    transition: all var(--transition-fast);
+    border-radius: var(--radius-sm);
 }
 
 .node-content:hover {
-    background: rgba(255, 0, 60, 0.1);
-    transform: translateX(5px);
+    background: var(--bg-elevated);
+    transform: translateX(4px);
 }
 
 .tree-node.directory .node-content {
-    color: var(--secondary);
+    color: var(--accent-primary);
     font-weight: 600;
 }
 
-.tree-node.file .node-content { 
-    color: var(--light);
+.tree-node.file .node-content {
+    color: var(--text-primary);
 }
 
 .tree-node.root .node-content {
-    color: var(--primary);
-    font-size: 1.1rem;
+    color: var(--accent-primary);
+    font-size: 1rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .tree-node i {
@@ -123,11 +129,11 @@
     top: 0;
     bottom: 0;
     width: 1px;
-    background: rgba(255, 0, 60, 0.3);
+    background: var(--border-primary);
 }
 
 .tree-node .tree-branch {
-    border-left: 1px solid rgba(255, 0, 60, 0.2);
+    border-left: 1px solid var(--border-primary);
     margin-left: 0.75rem;
     padding-left: 0.75rem;
 }
@@ -139,108 +145,106 @@
 .components-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .component-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 0, 60, 0.2);
-    border-radius: 15px;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    position: relative;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    text-align: left;
+    transition: all var(--transition-base);
 }
 
 .component-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary);
-    box-shadow: var(--glow-primary);
+    border-color: var(--border-accent);
+    transform: translateY(-2px);
 }
 
 .component-icon {
-    width: 80px;
-    height: 80px;
-    background: rgba(255, 0, 60, 0.1);
-    border: 2px solid rgba(255, 0, 60, 0.3);
-    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
-    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+    transition: all var(--transition-base);
 }
 
 .component-card:hover .component-icon {
-    background: rgba(255, 0, 60, 0.2);
-    border-color: var(--primary);
-    transform: scale(1.1);
+    border-color: var(--accent-primary);
+    background: rgba(239, 68, 68, 0.1);
 }
 
 .component-icon i {
-    font-size: 2rem;
-    color: var(--primary);
+    font-size: 1.25rem;
+    color: var(--accent-primary);
 }
 
 .component-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: var(--light);
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
 }
 
 .component-card p {
-    color: var(--gray);
-    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
     line-height: 1.6;
+    font-size: 0.9375rem;
 }
 
 .component-modules {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
+    gap: 0.375rem;
 }
 
 .component-modules span {
-    background: rgba(255, 0, 60, 0.1);
-    color: var(--primary);
-    padding: 0.25rem 0.75rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    background: var(--bg-elevated);
+    color: var(--text-secondary);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid var(--border-primary);
 }
 
 .framework-actions {
     padding: 6rem 2rem;
     text-align: center;
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--bg-secondary);
 }
 
 .action-content h2 {
-    font-family: 'Orbitron', monospace;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--light);
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
 }
 
 .action-content p {
-    font-size: 1.2rem;
-    color: var(--gray);
-    margin-bottom: 3rem;
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
 }
 
 .action-buttons {
     display: flex;
-    gap: 1.5rem;
+    gap: 0.75rem;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
     .framework-title {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
     
     .framework-stats {
@@ -298,8 +302,9 @@
 
 
 
-
-
+.title-line1{
+    color: #a1a1aa;
+}
 
 
 
