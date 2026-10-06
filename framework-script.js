@@ -1,81 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Remove loading screen after initialization
+    setTimeout(() => {
+        const loadingScreen = document.querySelector('.loading-screen');
+        if (loadingScreen) {
+            loadingScreen.classList.add('fade-out');
+            setTimeout(() => {
+                loadingScreen.remove();
+            }, 500);
+        }
+    }, 800);
+
     initFrameworkAnimations();
     initTreeInteractions();
-    initFrameworkParticles();
 });
-
-function initFrameworkParticles() {
-    if (typeof particlesJS !== 'undefined') {
-        particlesJS('particles-js', {
-            particles: {
-                number: { 
-                    value: 60,   
-                    density: { 
-                        enable: true, 
-                        value_area: 800 
-                    } 
-                },
-                color: { value: "#ff003c" },
-                shape: { type: "circle" },
-                opacity: { 
-                    value: 0.3,  
-                    random: true 
-                },
-                size: { 
-                    value: 2, 
-                    random: true 
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: "#ff003c",
-                    opacity: 0.1,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 1.5,
-                    direction: "none",
-                    random: true,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: { 
-                        enable: true, 
-                        mode: "repulse" 
-                    },
-                    onclick: { 
-                        enable: true, 
-                        mode: "push" 
-                    },
-                    resize: true
-                }
-            },
-            retina_detect: true
-        });
-    }
-}
 
 function initFrameworkAnimations() {
     const componentCards = document.querySelectorAll('.component-card');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
             }
         });
     }, { threshold: 0.1 });
 
     componentCards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        card.classList.add('scroll-reveal');
         observer.observe(card);
     });
 
@@ -83,13 +33,13 @@ function initFrameworkAnimations() {
     const treeNodes = document.querySelectorAll('.tree-node');
     treeNodes.forEach((node, index) => {
         node.style.opacity = '0';
-        node.style.transform = 'translateX(-20px)';
-        node.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        node.style.transform = 'translateX(-10px)';
+        node.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
         
         setTimeout(() => {
             node.style.opacity = '1';
             node.style.transform = 'translateX(0)';
-        }, 100 + index * 50);
+        }, 100 + index * 30);
     });
 }
 
@@ -113,6 +63,7 @@ function initTreeInteractions() {
                     node.classList.add('expanded');
                 }
             });
+            
             const icon = node.querySelector('.node-content i');
             if (icon) {
                 icon.classList.add('fa-folder');
@@ -130,6 +81,7 @@ function initTreeInteractions() {
             }
         }
     });
+    
     const rootNode = document.querySelector('.tree-node.root');
     if (rootNode) {
         const rootBranch = rootNode.querySelector('.tree-branch');
@@ -144,63 +96,6 @@ function initTreeInteractions() {
         }
     }
 }
-
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-        const focused = document.activeElement;
-        if (focused.classList.contains('tree-node')) {
-            e.preventDefault();
-            if (e.key === 'ArrowRight') {
-                // Expand
-                focused.click();
-            } else if (e.key === 'ArrowLeft') {
-                // Collapse
-                const branch = focused.querySelector('.tree-branch');
-                if (branch && branch.style.display !== 'none') {
-                    focused.click();
-                }
-            }
-        }
-    }
-});
-
-function initFrameworkLoading() {
-    const loadingScreen = document.getElementById('loading-screen');
-    
-    if (loadingScreen) {
-        loadingScreen.style.display = 'flex';
-        
-        window.addEventListener('load', function() {
-            setTimeout(() => {
-                loadingScreen.classList.add('fade-out');
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                }, 500);
-            }, 1000);
-        });
-
-        setTimeout(() => {
-            if (loadingScreen.style.display !== 'none') {
-                loadingScreen.classList.add('fade-out');
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                }, 500);
-            }
-        }, 4000);
-    }
-}
-
-initFrameworkLoading();
-
-
-// Clean URL handling
-if (window.location.pathname.includes('framework.html')) {
-    window.history.replaceState(null, null, '/');
-}
-
-
-
-
 
 
 
